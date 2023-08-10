@@ -1,48 +1,41 @@
-name: 'VRLabs VRC Packaging Action'
+name: vrc-packaging-action
 description: 'Action to package assets in both unitypackage and vcc package formats.'
+author: 'VRLabs'
 branding:
   icon: package
   color: blue
 inputs:
   
   path:
-    description:
-      'unity asset path'
+    description: 'unity asset path'
     required: true
     
   outputPath:
-    description: 
-      'output directory path for packages'
+    description: 'output directory path for packages'
     required: true
       
   releaseUrl:
-    description:
-      'The release url to set in the package.json'
+    description: 'The release url to set in the package.json'
     required: false
     default: ''
     
   noVcc:
-    description:
-      'Don't build the vcc package'
+    description: 'Do not build the vcc package'
     required: false
     default: 'false'
     
   noUnityPackage:
-    description:
-        'Don't build the unitypackage'
+    description: 'Do not build the unitypackage'
     required: false
     default: 'false'
     
 outputs:
   vccPackagePath:
-    description:
-      'Path of the exported vcc package.'
+    description: 'Path of the exported vcc package.'
   unityPackagePath:
-    description:
-      'Path of the exported unitypackage.'
+    description: 'Path of the exported unitypackage.'
   serverPackageJsonPath:
-    description:
-      'Path of the exported server-package.json.'
+    description: 'Path of the exported server-package.json.'
 runs:
   using: 'docker'
   image: 'docker://ghcr.io/vrlabs/vrctools-packaging:1'
