@@ -1,4 +1,4 @@
-# VRLabs VRC Packaging Action
+# VRC Packaging Action
 [![Generic badge](https://img.shields.io/github/release/VRLabs/VRC-Packaging-Action?display_name=tag&label=Release)](https://github.com/VRLabs/VRC-Packaging-Action/releases/latest)
 [![Generic badge](https://img.shields.io/badge/License-MIT-informational.svg)](https://github.com/VRLabs/VRC-Packaging-Action/blob/main/LICENSE) 
 
