@@ -18,6 +18,11 @@ inputs:
     description: 'The release url to set in the package.json'
     required: false
     default: ''
+  
+  unityReleaseUrl:
+    description: 'The unity release url to set in the package.json'
+    required: false
+    default: ''
     
   noVcc:
     description: 'Do not build the vcc package'
@@ -44,6 +49,8 @@ runs:
     - ${{ inputs.outputPath }}
     - '--releaseUrl'
     - ${{ inputs.releaseUrl }}
+    - '--unityReleaseUrl'
+    - ${{ inputs.unityReleaseUrl }}
     - '-novcc'
     - ${{ inputs.noVcc }}
     - '-nounity'
