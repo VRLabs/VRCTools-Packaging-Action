@@ -24,6 +24,11 @@ inputs:
     required: false
     default: ''
     
+  releaseVersion:
+    description: 'The release version to set in the package.json'
+    required: false
+    default: ''
+    
   noVcc:
     description: 'Do not build the vcc package'
     required: false
@@ -51,6 +56,8 @@ runs:
     - ${{ inputs.releaseUrl }}
     - '--unityReleaseUrl'
     - ${{ inputs.unityReleaseUrl }}
+    - '--releaseVersion'
+    - ${{ inputs.releaseVersion }}
     - '-novcc'
     - ${{ inputs.noVcc }}
     - '-nounity'

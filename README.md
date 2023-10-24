@@ -34,6 +34,10 @@ The release URL to set in the `package.json`.
 
 The release URL to set in the `package.json` for the unitypackage version.
 
+### `releaseVersion`
+
+The version to set in the `package.json`. If not specified it will be taken from the `package.json`.
+
 ### `noVcc`
 
 Skips the build of the `vcc` package, the `package.json` will not contain an url for the unitypackage version.
