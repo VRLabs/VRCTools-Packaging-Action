@@ -20,11 +20,11 @@ GitHub Action to package Unity assets in both `unitypackage` and `vcc` package f
 
 ### `path`
 
-**Required** The path to the folder to package
+**Required** The path to the package folder.
 
 ### `outputPath`
 
-**Required** The output directory path for the packages.
+**Required** The output directory path.
 
 ### `releaseUrl`
 
