@@ -58,9 +58,9 @@ runs:
     - ${{ inputs.unityReleaseUrl }}
     - '--releaseVersion'
     - ${{ inputs.releaseVersion }}
-    - '-novcc'
+    - '--novcc'
     - ${{ inputs.noVcc }}
-    - '-nounity'
+    - '--nounity'
     - ${{ inputs.NoUnityPackage }}
     - '--action'
     - 'true'
