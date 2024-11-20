@@ -1,4 +1,4 @@
-name: vrc-packaging-action
+name: vrc-packaging-action-JELLETEST
 description: 'Action to package assets in both unitypackage and vcc package formats.'
 author: 'VRLabs'
 branding:
