@@ -38,6 +38,11 @@ inputs:
     description: 'Do not build the unitypackage'
     required: false
     default: 'false'
+
+  customJsonFields:
+    description: 'Custom json fields'
+    required: false
+    default: ''
     
 outputs:
   vccPackagePath:
@@ -48,7 +53,7 @@ outputs:
     description: 'Path of the exported server-package.json.'
 runs:
   using: 'docker'
-  image: 'docker://ghcr.io/vrlabs/vrctools-packaging:1'
+  image: 'docker://ghcr.io/jellejurre/vrctools-packaging:0'
   args:
     - ${{ inputs.path }}
     - ${{ inputs.outputPath }}
@@ -62,5 +67,7 @@ runs:
     - ${{ inputs.noVcc }}
     - '--nounity'
     - ${{ inputs.NoUnityPackage }}
+    - '--customJsonFields'
+    - ${{ inputs.customJsonFields }}
     - '--action'
     - 'true'
