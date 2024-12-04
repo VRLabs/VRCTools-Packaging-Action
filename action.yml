@@ -38,6 +38,11 @@ inputs:
     description: 'Do not build the unitypackage'
     required: false
     default: 'false'
+
+  customJsonFields:
+    description: 'Custom json fields'
+    required: false
+    default: ''
     
 outputs:
   vccPackagePath:
@@ -62,5 +67,7 @@ runs:
     - ${{ inputs.noVcc }}
     - '--nounity'
     - ${{ inputs.NoUnityPackage }}
+    - '--customJsonFields'
+    - ${{ inputs.customJsonFields }}
     - '--action'
     - 'true'

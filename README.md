@@ -46,6 +46,10 @@ Skips the build of the `vcc` package, the `package.json` will not contain an url
 
 Skips the build of the `unitypackage`.
 
+### `customJsonFields`
+
+Customized fields to add to the `package.json`, in the form of a list of `key=value`
+
 ## Outputs
 
 ### `vccPackagePath`
@@ -82,9 +86,23 @@ with:
   noUnityPackage: 'true'
 ```
 
+## Example that includes extra fields to `package.json`
+
+```yaml
+uses: VRLabs/VRCTools-Packaging-Action@v1
+with:
+  path: 'Path/To/Asset'
+  outputPath: 'Packages'
+  releaseUrl: 'https://url/to/package.id-x.x.x.zip'
+  customJsonFields: |
+    "changelogUrl=https://link.to.changelog"
+    "category=essentials"
+```
+
 ## Contributors
 
 * [Cibbi](https://github.com/Cibbi)
+* [JelleJurre](https://github.com/jellejurre)
 
 ## License
 
